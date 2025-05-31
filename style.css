@@ -1,0 +1,166 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.progress-bar {
+    height: 8px;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    background-color: #007BFF;
+    transition: width 1s ease-in-out;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #007BFF;
+    border: 3px solid white;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #e0e0e0;
+}
+
+.service-card {
+    transition: all 0.3s ease;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007BFF;
+    transition: width .3s;
+}
+
+.stat-box {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #007BFF;
+    transition: all 0.5s ease;
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.blog-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.blog-modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007BFF;
+}
+
+.toggle-blog {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #007BFF;
+    margin-top: 15px;
+}
+
+.toggle-blog i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-blog.active i {
+    transform: rotate(180deg);
+}
+
+/* Blue section styling */
+.blue-section {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Custom blue headings */
+.blue-heading {
+    color: #007BFF;
+    font-weight: 600;
+}
+
+/* Improved timeline items */
+.timeline-item {
+    padding-left: 20px;
+}
